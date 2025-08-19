@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #5f7cad, #a3b5e7);
+    padding: 10px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    margin: 0;
+    font-weight: 700;
+    font-size: 28px;
+    color: white;
+}
+
+.brand-tagline {
+    font-weight: 400;
+    font-size: 12px;
+    color: #f0f0f0;
+    letter-spacing: 1px;
+}
+
+.search-bar {
+    text-align: center;
+}
+
+.search-bar p {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
+
+.search-input {
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #c00;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.hero {
+    position: relative;
+    background: linear-gradient(to bottom, #1d3164 0%, #5f7cad 40%, #dce5f9 100%);
+    min-height: 1000px;
+    padding: 50px 30px 100px;
+    color: white;
+    overflow: hidden; /* biar gambar gak keluar dari hero */
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/logo-bg.png');
+    background-repeat: no-repeat;
+    background-position: center 20px;
+    background-size: 800px;
+    opacity: 0.15; /* transparansi biar soft */
+    filter: blur(1.5px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 60%;
+}
+
+.greeting {
+    color: #eaff00;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.desc {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Tombol ikon kotak */
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: transparent;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+/* Hover effect */
+.icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+    color: #ffe066;
+}
+
+/* Opsional: untuk ikon warna putih di background gelap */
+.header .icon-btn {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.header .icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffe066;
+}
+
+.fitur-kanan {
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px 30px;
+}
+
+.fitur-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    gap: 20px;
+}
+
+.fitur-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    background: linear-gradient(to top, #e0e8f8, #ffffff);
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.fitur-item i {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #304d8e;
+}
+
+.fitur-item:hover {
+    transform: scale(1.05);
+    background: #dbe6ff;
+    color: #1d3164;
+}
+
+.menu-kanan-atas {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    z-index: 1000;
+}
+
+.fitur-float {
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    color: #304d8e;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px; /* teks lebih besar */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.fitur-float i {
+    font-size: 28px; /* ikon lebih besar */
+    margin-bottom: 6px;
+}
+
+
+.fitur-float:hover {
+    background-color: #e0eaff;
+    transform: translateY(-3px);
+}
+
+/* events */
+.event-section {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 16px;
+    margin-top: 50px;
+    color: #333;
+    box-shadow: 0 8px 16px rgba(38, 35, 164, 0.15);
+}
+
+.event-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1d3164;
+}
+
+.event-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.event-card {
+    flex: 0 0 auto;
+    width: 200px;
+    background: #dad8ff;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.btn-lihat {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    background-color: #1fa5de;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-lihat:hover {
+    background-color: #304d8e;
+}
+
+/* sosmed */
+.sosmed {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sosmed-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: rgb(45, 53, 206);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.sosmed-item i {
+    font-size: 20px;
+}
+
+.sosmed-item:hover {
+    transform: scale(1.05);
+    background-color: rgba(138, 141, 244, 0.2);
+}
+
+.sosmed-title {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: rgb(34, 22, 126);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    margin-top: 40px;
+}
