@@ -1,0 +1,186 @@
+/* Reset dan base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #b4cff0;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Header dengan gradient & layout modern */
+header {
+  background: linear-gradient(90deg, #007ACC 0%, #009FE3 100%);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100vw;
+  left: 0;
+  top: 0;
+}
+
+/* Posisi tombol dan logo tetap di kiri */
+.left-header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  gap: 14px;
+}
+
+/* Tombol back dengan gaya minimalis */
+.back-button {
+  background: white;
+  color: #007ACC;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: #e0f1ff;
+}
+
+/* Logo dibungkus dalam badge semi-transparan */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
+.logo-container img {
+  height: 42px;
+}
+
+.logo-text h1 {
+  font-size: 18px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+
+.logo-text h2 {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Judul TUTOR di tengah */
+.center-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.event-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.event-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex-wrap: wrap;
+  border: 2px solid #007ACC; /* Menambahkan border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-10px); /* Sedikit angkat saat hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Tambahkan shadow lebih tajam */
+}
+
+.event-card img {
+  width: 280px;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover img {
+  transform: scale(1.05); /* Memberi efek zoom saat hover */
+}
+
+.event-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.event-content h1 {
+  font-size: 22px;
+  margin-top: 0;
+  color: #0f172a;
+}
+
+.event-content h2 {
+  font-size: 18px;
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+.event-content ul {
+  padding: 0;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.event-content ul li {
+  margin-bottom: 5px;
+}
+
+.event-content a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.event-content a:hover {
+  text-decoration: underline;
+  color: #1565c0; /* Warna link sedikit lebih gelap saat hover */
+}
+
+footer {
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  color: #666;
+  background-color: #f0f0f0;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-card img {
+    width: 100%;
+    height: auto;
+  }
+}

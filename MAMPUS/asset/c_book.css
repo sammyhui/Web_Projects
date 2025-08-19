@@ -1,0 +1,210 @@
+/* Reset dan base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(90deg, #cbffe4 0%, #ffffff 100%);
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Header dengan gradient & layout modern */
+header {
+  background: linear-gradient(90deg, #007ACC 0%, #009FE3 100%);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 0;
+  display: flex;
+  justify-content: center; /* Tengahin judul */
+  align-items: center;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 100; /* Supaya header selalu di atas */
+  height: 72px; /* kasih tinggi supaya mudah atur vertikal */
+}
+
+/* Posisi tombol dan logo tetap di kiri */
+.left-header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 50%;               /* Vertikal center */
+  transform: translateY(-50%);
+  gap: 14px;
+}
+
+/* Tombol back dengan gaya minimalis */
+.back-button {
+  background: white;
+  color: #007ACC;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 42px;
+  width: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-button:hover {
+  background-color: #e0f1ff;
+}
+
+/* Logo dibungkus dalam badge semi-transparan */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  height: 42px; /* supaya sama tinggi tombol back */
+}
+
+.logo-container img {
+  height: 42px;
+  user-select: none;
+}
+
+.logo-text h1 {
+  font-size: 18px;
+  margin-bottom: 2px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.logo-text h2 {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Judul TUTOR di tengah */
+.center-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  user-select: none;
+}
+
+
+
+
+/* ===== Style untuk halaman booking ===== */
+main {
+  max-width: 480px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  font-family: 'Inter', sans-serif;
+  color: #2c3e50;
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #007ACC;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+button {
+  margin-top: 25px;
+  width: 100%;
+  background-color: #007ACC;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.error {
+  background: #ffe0e0;
+  color: #b00000;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.success {
+  background: #d1ffd6;
+  color: #006400;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-align: center;
+}
+
+a.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007ACC;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+a.back-link:hover {
+  text-decoration: underline;
+}
+
+input[disabled] {
+  background: #f0f0f0;
+  color: #444;
+  font-weight: 600;
+}
+
+#total_harga {
+  background: #dff0d8;
+  color: #2c662d;
+  font-weight: 700;
+}

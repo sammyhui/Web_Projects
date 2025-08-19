@@ -1,0 +1,204 @@
+/* Reset dan base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4f9ff;
+  color: #2c3e50;
+  /* Hapus padding ini supaya header nempel full ke kiri/kanan */
+  /* padding: 20px; */
+  margin: 0; /* Pastikan gak ada margin juga */
+}
+
+/* Header dengan gradient & layout modern */
+header {
+  background: linear-gradient(90deg, #007ACC 0%, #009FE3 100%);
+  color: white;
+  /* Hapus padding agar full nempel */
+  padding: 15px 20px; /* Bisa kamu sesuaikan kecil atau hilangkan juga */
+  border-radius: 0; /* Hilangkan rounded corner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100vw; /* pastikan selebar viewport */
+  left: 0; /* pastikan posisi kiri nol */
+  top: 0; /* menempel di atas */
+  /* optional, supaya tetap di atas kalau mau sticky */
+  /* position: sticky; */
+  /* z-index: 1000; */
+}
+
+/* Posisi tombol dan logo tetap di kiri */
+.left-header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px; /* Sesuaikan */
+  gap: 14px;
+}
+
+/* Tombol back dengan gaya minimalis */
+.back-button {
+  background: white;
+  color: #007ACC;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: #e0f1ff;
+}
+
+/* Logo dibungkus dalam badge semi-transparan */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
+.logo-container img {
+  height: 42px;
+}
+
+.logo-text h1 {
+  font-size: 18px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+
+.logo-text h2 {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Judul TUTOR di tengah */
+.center-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Container transaksi */
+.transaksi-container {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.product-img {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product-details h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.product-details p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+input,
+select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #007acc;
+}
+
+/* Tombol */
+.submit-button {
+  margin-top: 8px;
+  padding: 12px;
+  background-color: #ffd600;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #ffca28;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .transaksi-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+  }
+
+  .product-details {
+    width: 100%;
+  }
+}

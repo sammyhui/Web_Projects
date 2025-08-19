@@ -1,0 +1,213 @@
+/* Reset dan base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4f9ff;
+  color: #2c3e50;
+  /* Hapus padding ini supaya header nempel full ke kiri/kanan */
+  /* padding: 20px; */
+  margin: 0; /* Pastikan gak ada margin juga */
+}
+
+/* Header dengan gradient & layout modern */
+header {
+  background: linear-gradient(90deg, #007ACC 0%, #009FE3 100%);
+  color: white;
+  /* Hapus padding agar full nempel */
+  padding: 15px 20px; /* Bisa kamu sesuaikan kecil atau hilangkan juga */
+  border-radius: 0; /* Hilangkan rounded corner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  width: 100vw; /* pastikan selebar viewport */
+  left: 0; /* pastikan posisi kiri nol */
+  top: 0; /* menempel di atas */
+  /* optional, supaya tetap di atas kalau mau sticky */
+  /* position: sticky; */
+  /* z-index: 1000; */
+}
+
+/* Posisi tombol dan logo tetap di kiri */
+.left-header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px; /* Sesuaikan */
+  gap: 14px;
+}
+
+/* Tombol back dengan gaya minimalis */
+.back-button {
+  background: white;
+  color: #007ACC;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: #e0f1ff;
+}
+
+/* Logo dibungkus dalam badge semi-transparan */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
+.logo-container img {
+  height: 42px;
+}
+
+.logo-text h1 {
+  font-size: 18px;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+
+.logo-text h2 {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Judul TUTOR di tengah */
+.center-title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+/* Main content wrapper */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+/* Grid container */
+.grid-container {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* Item card */
+.item {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Item image */
+.item img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: #f8f8f8;
+  margin-bottom: 12px;
+  transition: filter 0.3s ease;
+}
+
+.item:hover img {
+  filter: brightness(1.05);
+}
+
+/* Item text */
+.item p {
+  margin: 6px 0;
+  font-weight: 600;
+  color: #1e2a38;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 16px;
+}
+
+/* Harga */
+.item p:last-child {
+  font-weight: 700;
+  color: #28a745;
+  font-size: 14px;
+}
+
+/* User image container */
+.image-container {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.user-image {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffd600;
+  box-shadow: 0 0 10px rgba(255, 214, 0, 0.6);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .center-title {
+    position: static;
+    transform: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  header {
+    justify-content: flex-start;
+    height: auto;
+    padding: 10px 16px;
+  }
+}
+
+
+.item button {
+  background-color: #ffd600;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  width: 100%;
+  margin-top: 12px;
+  box-shadow: 0 4px 6px rgba(255, 214, 0, 0.4);
+}
+
+.item button:hover {
+  background-color: #ffca28;
+  box-shadow: 0 6px 10px rgba(255, 214, 0, 0.6);
+}
